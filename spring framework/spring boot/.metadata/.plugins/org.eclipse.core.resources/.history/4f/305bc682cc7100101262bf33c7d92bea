@@ -1,0 +1,53 @@
+package com.example.ecommerce_app.controller;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.ecommerce_app.model.Product;
+import com.example.ecommerce_app.service.ProductService;
+
+@Controller
+
+public class ProductController {
+
+    @Autowired
+    private ProductService service;
+
+    @GetMapping
+    public String viewAll(Model model) {
+        model.addAttribute("products", service.getAll());
+        return "products";
+    }
+
+    @GetMapping("/add")
+    public String addForm(Model model) {
+        model.addAttribute("product", new Product());
+        return "add_product";
+    }
+
+    @PostMapping("/save")
+    public String save(@ModelAttribute Product product) {
+        service.add(product);
+        return "redirect:/products";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String editForm(@PathVariable Long id, Model model) {
+        model.addAttribute("product", service.getById(id));
+        return "add_product";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        service.delete(id);
+        return "redirect:/products";
+    }
+}

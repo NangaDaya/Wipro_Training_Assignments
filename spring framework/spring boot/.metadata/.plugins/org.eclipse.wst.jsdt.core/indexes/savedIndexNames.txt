@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\Wipro training projects\spring framework\spring boot\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2275804066.index
+2113084409.index
+3630043432.index
+3584823219.index
+266115827.index
+238522266.index
+2129865977.index
+1455723512.index
+4228645086.index

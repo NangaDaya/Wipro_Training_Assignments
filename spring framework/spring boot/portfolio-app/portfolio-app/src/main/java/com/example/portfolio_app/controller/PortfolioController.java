@@ -1,0 +1,44 @@
+package com.example.portfolio_app.controller;
+
+import com.example.portfolio_app.model.Education;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
+
+@Controller
+public class PortfolioController {
+
+    @GetMapping("/")
+    public String home() {
+        return "index";
+    }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
+
+    @GetMapping("/education")
+    public String education(Model model) {
+        List<Education> eduList = List.of(
+            new Education("B.Tech in Computer Science", "XYZ University", "2020 - 2024"),
+            new Education("High School", "ABC School", "2018 - 2020")
+        );
+        model.addAttribute("educations", eduList);
+        return "education";
+    }
+
+    @GetMapping("/skills")
+    public String skills(Model model) {
+        List<String> skills = List.of("Java", "Spring Boot", "HTML", "CSS", "JavaScript", "MySQL");
+        model.addAttribute("skills", skills);
+        return "skills";
+    }
+}

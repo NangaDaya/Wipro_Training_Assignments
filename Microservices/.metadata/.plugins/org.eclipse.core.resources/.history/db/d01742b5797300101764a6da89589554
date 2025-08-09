@@ -1,0 +1,41 @@
+package com.example.product_service.controller;
+
+import com.example.product_service.model.Product;
+import com.example.product_service.service.ProductService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/products")
+public class AppController {
+
+    @Autowired
+    private ProductService productService;
+
+    // POST /products - Create a new product
+    @PostMapping
+    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
+        Product created = productService.createProduct(product);
+        return ResponseEntity.ok(created);
+    }
+
+    // GET /products/name/{name} - Get product by name
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Product> getProductByName(@PathVariable String name) {
+        Optional<Product> product = productService.getProductByName(name);
+        return product.map(ResponseEntity::ok)
+                      .orElse(ResponseEntity.notFound().build());
+    }
+
+    // GET /products/{id} - Get product by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProductById(@PathVariable Long id) {
+        Optional<Product> product = productService.getProductById(id);
+        return product.map(ResponseEntity::ok)
+                      .orElse(ResponseEntity.notFound().build());
+    }
+}

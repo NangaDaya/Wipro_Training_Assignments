@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="red">
+<font color="blue">
+<form action="display.jsp">
+<label for="t1">Name</label>
+<input type="text" name="name" id="t1">
+<br>
+<label for="t2">Password</label>
+<input type="password" name="pass" id="t2">
+<br>
+<input type="submit" value="Go...">
+<input type="reset" value="Clear...">
+
+</form>
+</font>
+</body>
+</html>

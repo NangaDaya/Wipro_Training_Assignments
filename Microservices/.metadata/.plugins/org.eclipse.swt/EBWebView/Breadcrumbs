@@ -1,0 +1,83 @@
+8:09:17 Memory Pressure: Moderate
+8:09:22 Memory Pressure: Critical
+8:09:27 Memory Pressure: Moderate
+8:09:37 Memory Pressure: Moderate
+8:09:47 Memory Pressure: Moderate
+8:09:57 Memory Pressure: Moderate
+8:10:07 Memory Pressure: Moderate
+8:10:17 Memory Pressure: Moderate
+8:10:27 Memory Pressure: Moderate
+8:10:37 Memory Pressure: Moderate
+8:10:47 Memory Pressure: Moderate
+8:10:57 Memory Pressure: Moderate
+8:11:07 Memory Pressure: Moderate
+8:11:17 Memory Pressure: Moderate
+8:11:27 Memory Pressure: Moderate
+8:11:37 Memory Pressure: Moderate
+8:11:51 Memory Pressure: Moderate
+8:12:01 Memory Pressure: Moderate
+8:12:11 Memory Pressure: Moderate
+8:12:21 Memory Pressure: Moderate
+8:12:31 Memory Pressure: Critical
+8:12:36 Memory Pressure: Moderate
+8:12:46 Memory Pressure: Moderate
+8:12:56 Memory Pressure: Moderate
+8:13:06 Memory Pressure: Moderate
+8:13:16 Memory Pressure: Moderate
+8:13:21 Memory Pressure: Critical
+8:13:26 Memory Pressure: Moderate
+8:13:36 Memory Pressure: Moderate
+8:13:46 Memory Pressure: Moderate
+8:13:56 Memory Pressure: Moderate
+8:14:06 Memory Pressure: Moderate
+8:14:16 Memory Pressure: Moderate
+8:14:26 Memory Pressure: Moderate
+8:14:36 Memory Pressure: Moderate
+8:14:46 Memory Pressure: Moderate
+8:14:57 Memory Pressure: Moderate
+8:15:08 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+8:15:08 Microsoft.UnloadController.HasCompletedUnloadProcessing_False
+8:15:21 Microsoft.Shutdown.OnWindowClosing
+8:15:21 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+8:15:21 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+8:15:21 Microsoft.Shutdown.OnWindowClosing_MaybeClearBrowsingDataOnExit
+8:15:21 Microsoft.Shutdown.OnWindowClosing_ClearBrowsingDataOnExitNotInProgress
+8:15:21 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+8:15:22 Microsoft.Shutdown.TabStripModel.CloseAllTabs
+8:15:22 Microsoft.Shutdown.TabStripModel.CloseTabs
+8:15:22 Microsoft.Shutdown.TabStripModel.CloseTabs_EdgeBeforeClosingAllTabs
+8:15:22 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl
+8:15:22 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_TabClosable
+8:15:22 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosingAll
+8:15:24 Microsoft.Shutdown.TabStripModel.CloseWebContentses
+8:15:24 Microsoft.Shutdown.TabStripModel.CloseWebContentses_FastShutdown
+8:15:24 Microsoft.Shutdown.TabStripModel.ShouldRunUnloadListenerBeforeClosing_false
+8:15:30 Tab1 RenderProcessGone
+8:15:30 Microsoft.UnloadController.ClearUnloadState
+8:15:31 Microsoft.Shutdown.TabStripModel.RunUnloadListenerBeforeClosing_false
+8:15:31 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosedAll
+8:15:31 Microsoft.Shutdown.TabStripModel.SendDetachWebContentsNotifications
+8:15:33 Microsoft.UnloadController.ClearUnloadState
+8:15:33 Browser1 Close Tab1 at 0
+8:15:33 Tab1 WebContentsDestroyed
+8:15:36 Microsoft.UnloadController.TabStripEmpty
+8:15:36 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+8:15:36 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+8:15:36 Microsoft.Shutdown.OnWindowClosing
+8:15:36 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+8:15:36 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+8:15:36 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+8:15:36 Widget Closed: BrowserFrame
+8:15:38 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+8:15:38 Microsoft.Shutdown.OnWindowClosing
+8:15:38 Microsoft.Shutdown.OnWindowClosing_DeleteScheduled
+8:15:41 Microsoft.Last_Browser_Removed
+8:15:46 Microsoft.Shutdown.ShutdownIfNoBrowsers
+8:15:46 Microsoft.Shutdown.SetTryingToQuit_Quitting
+8:15:47 Microsoft.Shutdown.NotifyAppTerminating
+8:15:47 Microsoft.Shutdown.OnAppExiting
+8:15:47 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura
+8:15:47 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura.NotificationUIManager_StartShutdown
+8:15:47 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura.CloseAllSecondaryWidgets
+8:15:47 Memory Pressure: Moderate
+8:15:58 Shutdown

@@ -1,0 +1,41 @@
+package com.example.ecommerce_app.service;
+
+
+
+import com.example.ecommerce_app.model.Order;
+import com.example.ecommerce_app.model.Product;
+import com.example.ecommerce_app.repository.OrderRepository;
+import com.example.ecommerce_app.repository.ProductRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class OrderService {
+
+ private final OrderRepository orderRepo;
+ private final ProductRepository productRepo;
+
+ public OrderService(OrderRepository orderRepo, ProductRepository productRepo) {
+     this.orderRepo = orderRepo;
+     this.productRepo = productRepo;
+ }
+
+ public List<Order> getAll() {
+     return orderRepo.findAll();
+ }
+
+ public Order placeOrder(Order order) {
+     Product product = productRepo.findById(order.getProductId()).orElseThrow();
+     if (product.getQuantity() < order.getQuantity()) {
+         throw new RuntimeException("Insufficient product quantity.");
+     }
+
+     double totalPrice = order.getQuantity() * product.getPrice();
+     product.setQuantity(product.getQuantity() - order.getQuantity());
+     productRepo.save(product);
+
+     order.setTotalPrice(totalPrice);
+     return orderRepo.save(order);
+ }
+}

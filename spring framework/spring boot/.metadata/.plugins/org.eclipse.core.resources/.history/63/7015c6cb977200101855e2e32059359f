@@ -1,0 +1,63 @@
+package com.example.ecommerce_app.controller;
+
+
+import com.example.ecommerce_app.model.Order;
+import com.example.ecommerce_app.model.Product;
+import com.example.ecommerce_app.repository.OrderRepository;
+import com.example.ecommerce_app.repository.ProductRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
+import java.util.List;
+
+@Controller
+@RequestMapping("/orders")
+public class OrderController {
+
+    @Autowired
+    private OrderRepository orderRepository;
+
+    @Autowired
+    private ProductRepository productRepository;
+
+    // Show all orders
+    @GetMapping
+    public String listOrders(Model model) {
+        List<Order> orders = orderRepository.findAll();
+        model.addAttribute("orders", orders);
+        return "order"; // order.html
+    }
+
+    // Show place order form
+    @GetMapping("/new")
+    public String showOrderForm(Model model) {
+        model.addAttribute("order", new Order());
+        model.addAttribute("products", productRepository.findAll());
+        return "place-order"; // place-order.html
+    }
+
+    // Handle order submission
+    @PostMapping("/submit")
+    public String placeOrder(@ModelAttribute("order") Order order, Model model) {
+        Product product = productRepository.findById(order.getProductId()).orElse(null);
+
+        if (product == null) {
+            model.addAttribute("error", "Invalid product selected.");
+            model.addAttribute("products", productRepository.findAll());
+            return "place-order";
+        }
+
+        // Calculate total price and set order date
+        double total = product.getPrice() * order.getQuantity();
+        order.setTotalPrice(total);
+        order.setOrderDate(LocalDate.now());
+
+        orderRepository.save(order);
+
+        return "redirect:/orders";
+    }
+}

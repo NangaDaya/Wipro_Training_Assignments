@@ -1,0 +1,11 @@
+127.0.0.1 - - [06/Aug/2025:16:18:08 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Aug/2025:16:18:11 +0530] "GET /ecommerce-app-rest-api/WEB-INF/classes/com/example/ecommerce_app_rest_api/config/OpenAPIConfig.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [06/Aug/2025:16:18:12 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [06/Aug/2025:16:20:14 +0530] "GET /swagger-ui.html HTTP/1.1" 404 766
+127.0.0.1 - - [06/Aug/2025:16:58:09 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Aug/2025:16:58:11 +0530] "GET /ecommerce-app-rest-api/WEB-INF/classes/application.properties HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [06/Aug/2025:16:59:33 +0530] "GET /ecommerce-app-rest-api/WEB-INF/classes/application-test.properties HTTP/1.1" 404 682
+127.0.0.1 - - [06/Aug/2025:17:27:26 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Aug/2025:17:27:26 +0530] "GET /ecommerce-app-rest-api/WEB-INF/classes/application-test.properties HTTP/1.1" 404 682
+127.0.0.1 - - [06/Aug/2025:17:35:46 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Aug/2025:17:35:48 +0530] "GET /ecommerce-app-rest-api/WEB-INF/classes/application.properties HTTP/1.1" 404 682

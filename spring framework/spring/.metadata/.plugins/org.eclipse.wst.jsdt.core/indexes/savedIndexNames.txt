@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Wipro training projects\spring framework\spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+662584265.index
+4285839787.index
+1857379097.index
+3204840682.index
+2791653732.index
+3617312122.index

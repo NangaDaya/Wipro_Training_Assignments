@@ -1,0 +1,40 @@
+package com.example.ecommerce_app.service;
+
+
+
+import com.example.ecommerce_app.model.Product;
+import com.example.ecommerce_app.repository.ProductRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class ProductService {
+
+ private final ProductRepository productRepo;
+
+ public ProductService(ProductRepository productRepo) {
+     this.productRepo = productRepo;
+ }
+
+ public List<Product> getAll() {
+     return productRepo.findAll();
+ }
+
+ public Product add(Product product) {
+     return productRepo.save(product);
+ }
+
+ public Product update(Long id, Product product) {
+     Product existing = productRepo.findById(id).orElseThrow();
+     existing.setName(product.getName());
+     
+     existing.setPrice(product.getPrice());
+     
+     return productRepo.save(existing);
+ }
+
+ public void delete(Long id) {
+     productRepo.deleteById(id);
+ }
+}

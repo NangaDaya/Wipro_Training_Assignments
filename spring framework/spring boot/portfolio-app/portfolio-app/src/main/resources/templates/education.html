@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Education</title></head>
+<body>
+<h2>My Education</h2>
+<ul>
+    <li th:each="edu : ${educations}">
+        <strong th:text="${edu.degree}"></strong> - 
+        <span th:text="${edu.institution}"></span> 
+        (<span th:text="${edu.year}"></span>)
+    </li>
+</ul>
+<a href="/">Back to Home</a>
+</body>
+</html>
