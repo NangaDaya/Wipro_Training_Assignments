@@ -14,6 +14,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Wipro_Training_Assignments\Assignments for Backend\Simple Transportation"/>
+			<item value="C:\Wipro_Training_Assignments\Assignments for Backend\Healthcare_Appointment_Records_System"/>
+			<item value="C:\Wipro_Training_Assignments\Assignments for Backend\Online_Learning_Platform"/>
 			<item value="C:\Wipro_Training_Assignments\Healthcare Appointment &amp; Records System Assignment"/>
 			<item value="C:\Wipro_Training_Assignments\JSP_Assignment"/>
 			<item value="C:\Wipro_Training_Assignments\JDBC Assignment"/>
