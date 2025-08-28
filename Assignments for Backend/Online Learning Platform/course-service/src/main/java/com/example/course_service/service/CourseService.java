@@ -27,7 +27,7 @@ public class CourseService {
     }
 
     public Course updateCourse(Long id, Course course) {
-        course.setId(id);
+        
         return courseRepository.save(course);
     }
 

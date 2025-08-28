@@ -1,0 +1,27 @@
+<h2>Notifications</h2>
+<a routerLink="/notifications/add">Add Notification</a>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User ID</th>
+      <th>Message</th>
+      <th>Read</th>
+      <th>Created At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let n of notifications">
+      <td>{{n.id}}</td>
+      <td>{{n.userId}}</td>
+      <td>{{n.message}}</td>
+      <td>{{n.read ? 'Yes' : 'No'}}</td>
+      <td>{{n.createdAt}}</td>
+      <td>
+        <a [routerLink]="['/notifications/edit', n.id]">Edit</a> |
+        <button (click)="deleteNotification(n.id!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

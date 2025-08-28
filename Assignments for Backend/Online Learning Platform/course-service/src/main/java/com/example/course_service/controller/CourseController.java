@@ -17,6 +17,7 @@ public class CourseController {
 
     @PostMapping
     public Course createCourse(@RequestBody Course course) {
+    	course.setId(null); 
         return courseService.createCourse(course);
     }
 

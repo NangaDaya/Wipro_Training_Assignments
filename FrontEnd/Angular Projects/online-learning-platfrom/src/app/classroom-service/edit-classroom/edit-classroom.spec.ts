@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditClassroom } from './edit-classroom';
+import { provideZonelessChangeDetection } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('EditClassroom', () => {
   let component: EditClassroom;
@@ -8,7 +10,8 @@ describe('EditClassroom', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditClassroom]
+      imports: [EditClassroom],
+      providers: [provideZonelessChangeDetection(), provideHttpClient()]
     })
     .compileComponents();
 

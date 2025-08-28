@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewUser } from './view-user';
+import { provideZonelessChangeDetection } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('ViewUser', () => {
   let component: ViewUser;
@@ -8,7 +10,8 @@ describe('ViewUser', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ViewUser]
+      imports: [ViewUser],
+      providers: [provideZonelessChangeDetection(), provideHttpClient()]
     })
     .compileComponents();
 

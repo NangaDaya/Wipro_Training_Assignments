@@ -1,0 +1,18 @@
+<h2>Edit Assessment</h2>
+<form>
+  <label>Title</label>
+  <input type="text" [(ngModel)]="assessment.title" name="title"><br>
+
+  <label>Description</label>
+  <input type="text" [(ngModel)]="assessment.description" name="description"><br>
+
+  <label>Total Marks</label>
+  <input type="number" [(ngModel)]="assessment.totalMarks" name="totalMarks"><br>
+
+  <label>Pass Marks</label>
+  <input type="number" [(ngModel)]="assessment.passMarks" name="passMarks"><br>
+
+  <button type="submit" (click)="onSubmit()">Update</button>
+  <button type="reset">Reset</button>
+</form>
+

@@ -22,7 +22,7 @@ public class ApiGatewayApplication {
 	                .uri("http://localhost:1111")) 
 	            .route("course-service", r -> r.path("/api/courses/**")
 	                .uri("http://localhost:2222"))
-	            .route("classroom-service", r -> r.path("/api/assessments/**")
+	            .route("classroom-service", r -> r.path("/api/classrooms/**")
 		                .uri("http://localhost:3333")) 
 	            .route("assessment-service", r -> r.path("/api/assessments/**")
 	                .uri("http://localhost:4444")) 
